@@ -1,6 +1,6 @@
 import { ReactElement } from "react"
 
-//export const apiUrl = "http://localhost:4000/api"
+// export const apiUrl = "http://localhost:4000/api"
 export const apiUrl = "https://pmo-ios-backend.herokuapp.com/api"   // backend hosted on heroku
 
 

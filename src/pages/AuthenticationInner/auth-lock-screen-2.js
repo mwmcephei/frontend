@@ -59,7 +59,6 @@ const LockScreen2 = props => {
                           ) : null}
 
                           <div className="user-thumb text-center mb-4">
-
                             <h5 className="font-size-15 mt-3">Maria Laird</h5>
                           </div>
 

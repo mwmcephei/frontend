@@ -122,7 +122,6 @@ const Dashboard = () => {
           {/* Render Breadcrumb */}
           <Breadcrumbs title="Dashboards" breadcrumbItem="Crypto" />
           <Row>
-
             <Col xl="8">
               <CardWelcome />
 

@@ -2,8 +2,6 @@ import React from "react"
 import "tui-chart/dist/tui-chart.css"
 import { BoxPlotChart } from "@toast-ui/react-chart"
 
-
-
 const theme = {
   chart: {
     background: {
@@ -44,7 +42,6 @@ const theme = {
     colors: ["#556ee6", "#34c38f"],
   },
 }
-
 
 const BoxPlotChartToast = props => {
   const data = {

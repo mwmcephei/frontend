@@ -2,6 +2,7 @@ import React, { ReactElement } from "react"
 import { useState, useEffect } from 'react';
 import ReactApexChart from "react-apexcharts"
 import { ApexOptions } from 'apexcharts'
+import "./LineColumnArea.css"
 
 type LineColumnAreaProps = {
   labels: string[],
@@ -20,10 +21,6 @@ const LineColumnArea = ({ labels, monthlySpendings, approved }: LineColumnAreaPr
     if (typeof labels != 'undefined' && labels &&
       typeof monthlySpendings != 'undefined' && monthlySpendings &&
       typeof approved != 'undefined' && approved) {
-      console.log("data ")
-      console.log(labels)
-      console.log(monthlySpendings)
-      console.log(approved)
 
       const a = monthlySpendings.map(a => {
         return approved
@@ -31,8 +28,6 @@ const LineColumnArea = ({ labels, monthlySpendings, approved }: LineColumnAreaPr
       setApproved(a)
 
       const acumulateSpendingsAray = acumulateArray(monthlySpendings)
-      console.log("acumulateSpendings")
-      console.log(acumulateSpendingsAray)
       setAccumulatedSpendings(acumulateSpendingsAray)
     } else {
       console.log("NO PROPS")
@@ -148,10 +143,12 @@ const LineColumnArea = ({ labels, monthlySpendings, approved }: LineColumnAreaPr
   let budgetChart = <div></div>
   if (labels && monthlySpendings && approved) {
     budgetChart = <ReactApexChart
+      className="scrollableChart "
       options={options}
       series={series}
       type="line"
       height="350"
+
     />
   }
 

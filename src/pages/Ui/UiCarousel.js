@@ -13,7 +13,6 @@ import {
 // Carousel
 import Slide from "./CarouselTypes/slide"
 
-
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb"
 

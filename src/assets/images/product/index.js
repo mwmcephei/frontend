@@ -1,13 +1,3 @@
+export {}
 
-
-
-
-
-export {
-
-
-}
-
-export const productImages = {
-
-}
+export const productImages = {}

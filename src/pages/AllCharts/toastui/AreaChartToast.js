@@ -3,8 +3,6 @@ import React from "react"
 import "tui-chart/dist/tui-chart.css"
 import { AreaChart } from "@toast-ui/react-chart"
 
-
-
 const theme = {
   chart: {
     background: {
@@ -45,7 +43,6 @@ const theme = {
     colors: ["#f46a6a", "#34c38f", "#556ee6"],
   },
 }
-
 
 const AreaChartToast = props => {
   const data = {

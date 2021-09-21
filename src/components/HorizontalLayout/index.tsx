@@ -43,7 +43,9 @@ const Layout = props => {
   }, [props.location.pathname])
 
   useEffect(() => {
+    openMenu()
     window.scrollTo(0, 0)
+    setIsMenuOpened(false)
   }, [])
 
   /*
@@ -106,7 +108,7 @@ const Layout = props => {
           isMenuOpened={isMenuOpened}
           openLeftMenuCallBack={openMenu}
         />
-        <Navbar menuOpen={isMenuOpened} />
+        <Navbar menuOpen={isMenuOpened} pageChanged={props.location.pathname} />
         <div className="main-content">{props.children}</div>
         <Footer />
       </div>

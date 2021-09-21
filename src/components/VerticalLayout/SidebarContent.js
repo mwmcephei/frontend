@@ -109,7 +109,6 @@ const SidebarContent = props => {
                 <li>
                   <Link to="/dashboard-crypto">{props.t("Crypto")}</Link>
                 </li>
-
               </ul>
             </li>
 
@@ -210,7 +209,6 @@ const SidebarContent = props => {
                 <span>{props.t("Email")}</span>
               </Link>
               <ul className="sub-menu" aria-expanded="false">
-
                 <li>
                   <Link to="/#">
                     <span
@@ -322,12 +320,8 @@ const SidebarContent = props => {
                   {props.t("New")}
                 </span>
                 <i className="bx bxs-detail" />
-
-
               </Link>
-              <ul className="sub-menu" aria-expanded="false">
-
-              </ul>
+              <ul className="sub-menu" aria-expanded="false"></ul>
             </li>
 
             <li className="menu-title">Pages</li>

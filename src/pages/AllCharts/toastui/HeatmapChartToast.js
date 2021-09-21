@@ -3,8 +3,6 @@ import React from "react"
 import "tui-chart/dist/tui-chart.css"
 import { HeatMapChart } from "@toast-ui/react-chart"
 
-
-
 const theme = {
   chart: {
     background: {
@@ -13,7 +11,6 @@ const theme = {
     },
   },
 }
-
 
 const HeatmapChartToast = props => {
   const data = {

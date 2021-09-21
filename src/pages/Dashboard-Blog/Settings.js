@@ -11,7 +11,6 @@ import {
   Media,
 } from "reactstrap"
 
-
 const Settings = props => {
   return (
     <React.Fragment>
@@ -19,9 +18,7 @@ const Settings = props => {
         <Card>
           <CardBody>
             <div className="media">
-              <div className="me-3">
-
-              </div>
+              <div className="me-3"></div>
               <div className="media-body">
                 <Media>
                   <div className="media-body">

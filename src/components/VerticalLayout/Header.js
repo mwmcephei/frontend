@@ -16,7 +16,6 @@ import ProfileMenu from "../CommonForBoth/TopbarDropdown/ProfileMenu"
 import RightSidebar from "../CommonForBoth/RightSidebar"
 import megamenuImg from "../../assets/images/megamenu-img.png"
 
-
 //i18n
 import { withTranslation } from "react-i18next"
 

@@ -1,5 +1,7 @@
 import { ReactElement } from 'react';
 import { useState, useEffect } from 'react';
+import { apiUrl, getMax } from "../../globalVars"
+
 import {
     Container,
     Row,
@@ -12,6 +14,7 @@ import {
 import CardUser from "../../pages/Dashboard-saas/card-user"
 import LineColumnArea from "pages/AllCharts/apex/LineColumnArea"
 import SalesAnalytics from 'pages/Dashboard-saas/sales-analytics'
+import BreadcrumbOnlyTitle from 'components/Common/BreadcrumbOnlyTitle';
 
 
 type OverviewType = {
@@ -38,10 +41,11 @@ const Overview = (): ReactElement => {
 
 
     useEffect(() => {
-        fetch(process.env.REACT_APP_API_URL_LOCAL + "/budget")
+        fetch(apiUrl + "/budget")
             .then(response => response.json())
             .then(response => {
                 if (response.monthlySpendings && response.approvedBudgetPerMonth) {
+                    setMonthlySpendings(response.monthlySpendings)
                     let labels: string[] = []
                     for (let i = 0; i < response.monthlySpendings.length; i++) {
                         const date = "0" + (i + 1) + "/01/" + response.year
@@ -60,16 +64,16 @@ const Overview = (): ReactElement => {
 
     useEffect(() => {
         if (approved) {
-            fetch(process.env.REACT_APP_API_URL_LOCAL + "/overview")
+            fetch(apiUrl + "/overview")
                 .then(response => response.json())
                 .then(response => {
                     setOverviewData(response)
-                })
-                .catch(error => console.log(error));
-            fetch(process.env.REACT_APP_API_URL_LOCAL + "/measures")
-                .then(response => response.json())
-                .then(response => {
-                    setMeasures(response)
+                    fetch(apiUrl + "/measures")
+                        .then(response => response.json())
+                        .then(response => {
+                            setMeasures(response)
+                        })
+                        .catch(error => console.log(error));
                 })
                 .catch(error => console.log(error));
         }
@@ -160,6 +164,11 @@ const Overview = (): ReactElement => {
     if (overviewData && measures && measuresPieChart && measurePKI_pieChart && labels && monthlySpendings && approved) {
         content = (<div>
             <Row>
+                <Container >
+                    <BreadcrumbOnlyTitle ttle="" breadcrumbItem="Dashboard" />
+                </Container>
+            </Row>
+            <Row>
                 <Container>
                     {getOverview(overviewData)}
                 </Container>
@@ -174,6 +183,7 @@ const Overview = (): ReactElement => {
                                 yellow={measuresPieChart.yellowCounter}
                                 red={measuresPieChart.redCounter}
                                 labels={["Status ", "Status ", "Status "]}
+                                isKPIChart={false}
                             />
                         </Col>
                         <Col xs="12" xm="6" lg="6" xl="6">
@@ -182,6 +192,7 @@ const Overview = (): ReactElement => {
                                 yellow={measurePKI_pieChart.yellowCounter}
                                 red={measurePKI_pieChart.redCounter}
                                 labels={["Behind ", "On Track ", "Achieved "]}
+                                isKPIChart={true}
                             />
                         </Col>
                     </Row>

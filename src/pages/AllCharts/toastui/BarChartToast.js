@@ -3,8 +3,6 @@ import React from "react"
 import "tui-chart/dist/tui-chart.css"
 import { BarChart } from "@toast-ui/react-chart"
 
-
-
 const theme = {
   chart: {
     background: {
@@ -45,7 +43,6 @@ const theme = {
     },
   },
 }
-
 
 const BarChartToast = props => {
   const data = {

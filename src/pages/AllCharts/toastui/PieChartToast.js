@@ -3,8 +3,6 @@ import React from "react"
 import "tui-chart/dist/tui-chart.css"
 import { PieChart } from "@toast-ui/react-chart"
 
-
-
 var theme = {
   chart: {
     background: {
@@ -28,7 +26,6 @@ var theme = {
     colors: ["#556ee6", "#34c38f", "#f46a6a", "#50a5f1", "#f1b44c"],
   },
 }
-
 
 const PieChartToast = props => {
   const data = {

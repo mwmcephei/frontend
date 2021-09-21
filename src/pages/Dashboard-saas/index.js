@@ -54,7 +54,6 @@ const DashboardSaas = props => {
           {/* Render Breadcrumb */}
           <Breadcrumbs title="Dashboards" breadcrumbItem="Saas" />
 
-
           <Row>
             {/* welcome card */}
             <CardWelcome />

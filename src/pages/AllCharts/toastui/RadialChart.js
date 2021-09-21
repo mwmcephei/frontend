@@ -2,8 +2,6 @@ import React from "react"
 import "tui-chart/dist/tui-chart.css"
 import { RadialChart } from "@toast-ui/react-chart"
 
-
-
 const theme = {
   chart: {
     background: {
@@ -44,7 +42,6 @@ const theme = {
     colors: ["#556ee6", "#34c38f", "#f1b44c", "#f46a6a"],
   },
 }
-
 
 const RadialChartToast = props => {
   const data = {

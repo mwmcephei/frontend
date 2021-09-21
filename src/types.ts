@@ -41,8 +41,14 @@ export type Measure = {
     time: string,
     risks: Risk[],
     kpiData: KPI,
-    totalApprovedBudget: number,
-    monthlySpendings: number[]
+    monthlySpendings: number[],
+    budgetDetail: {
+        totalApprovedBudget: number,
+        contractBudget: number,
+        spentBudget: number,
+        invoicedBudget: number,
+        forecastBudget: number,
+    }
 }
 
 export type Artefact = {

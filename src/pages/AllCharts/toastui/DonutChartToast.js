@@ -2,8 +2,6 @@ import React from "react"
 import "tui-chart/dist/tui-chart.css"
 import { PieChart } from "@toast-ui/react-chart"
 
-
-
 const theme = {
   chart: {
     background: {
@@ -33,7 +31,6 @@ const theme = {
     },
   },
 }
-
 
 const DonutChartToast = props => {
   const data = {

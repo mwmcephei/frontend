@@ -4,7 +4,6 @@ import { Container, Row, Col } from "reactstrap"
 //Import Components
 import FeatureBox from "./feature-box"
 
-
 const Features = () => {
   const features1 = [
     { id: 1, desc: "Donec pede justo vel aliquet" },
@@ -29,9 +28,7 @@ const Features = () => {
           </Row>
 
           <Row className="align-items-center pt-4">
-            <Col md="6" sm="8">
-
-            </Col>
+            <Col md="6" sm="8"></Col>
             <Col md="5" className="ms-auto">
               {/* featurebox */}
               <FeatureBox
@@ -53,9 +50,7 @@ const Features = () => {
                 desc="It will be as simple as Occidental; in fact, it will be Occidental. To an English person, it will seem like simplified English, as a skeptical Cambridge friend."
               />
             </Col>
-            <Col md="6" sm="8" className="ms-md-auto">
-
-            </Col>
+            <Col md="6" sm="8" className="ms-md-auto"></Col>
           </Row>
         </Container>
       </section>

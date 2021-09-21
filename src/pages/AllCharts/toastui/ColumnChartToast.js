@@ -3,8 +3,6 @@ import React from "react"
 import "tui-chart/dist/tui-chart.css"
 import { ColumnChart } from "@toast-ui/react-chart"
 
-
-
 const theme = {
   chart: {
     background: {
@@ -45,7 +43,6 @@ const theme = {
     colors: ["#34c38f", "#556ee6", "#f46a6a"],
   },
 }
-
 
 const ColumnChartToast = props => {
   const data = {

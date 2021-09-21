@@ -5,6 +5,7 @@
   "bundledWebRuntime": false,
   "allowMixedContent": true,
   "ios": {
-    "contentInset": "always"
+    "contentInset": "always",
+    "overlay": false
   }
 }

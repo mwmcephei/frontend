@@ -1,7 +1,6 @@
 import React from "react"
 import { Card, CardBody, Col } from "reactstrap"
 
-
 function RightBar(props) {
   return (
     <React.Fragment>
@@ -120,7 +119,6 @@ function RightBar(props) {
                   <div className="media align-items-center">
                     <div className="me-3">
                       <img
-
                         alt=""
                         className="avatar-md h-auto d-block rounded"
                       />

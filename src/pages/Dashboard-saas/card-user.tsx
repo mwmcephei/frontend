@@ -47,7 +47,7 @@ function CardUser(props: overviewPropType): ReactElement {
         <Col lg="12">
           <Card>
             <CardBody>
-              <CardTitle className="mb-1">Short Summary</CardTitle>
+              <CardTitle className="mb-1">IT Security Initiative</CardTitle>
               <h6 className="card-subtitle mb-3 ">HY2 2021</h6>
               <Row>
                 <div>
@@ -55,7 +55,7 @@ function CardUser(props: overviewPropType): ReactElement {
                     <Row>
                       <Col xs="4">
                         <div className="text-center">
-                          <p className="text-muted mb-2">
+                          <p className=" mb-2">
                             Total Measures
                           </p>
                           <div className="mt-3">
@@ -66,7 +66,7 @@ function CardUser(props: overviewPropType): ReactElement {
                       </Col>
                       <Col xs="4">
                         <div >
-                          <p className="text-muted mb-2 text-center">
+                          <p className=" mb-2 text-center">
                             Approved Budget
                           </p>
                           <div className="text-center mt-3">
@@ -77,12 +77,12 @@ function CardUser(props: overviewPropType): ReactElement {
                       </Col>
                       <Col xs="4" className="">
                         <div className="text-center">
-                          <p className="text-muted mb-2">
+                          <p className=" mb-2">
                             Overall Status
                           </p>
                           <div className="text-center ">
                             <div className="justify-content-center mx-auto">
-                              {getCircle(props.signal, 30)}
+                              {getCircle(props.signal, 20)}
                             </div>
                           </div>
                         </div>

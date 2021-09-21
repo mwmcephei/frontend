@@ -6,7 +6,6 @@ import ReactEcharts from "echarts-for-react"
 class Doughnut extends Component {
   getOption = () => {
     return {
-
       color: ["#02a499", "#f8b425"],
       series: [
         {
@@ -36,7 +35,11 @@ class Doughnut extends Component {
   render() {
     return (
       <React.Fragment>
-        <ReactEcharts style={{ height: "50px", width: '30%' }} option={this.getOption()} notMerge={true} />
+        <ReactEcharts
+          style={{ height: "50px", width: "30%" }}
+          option={this.getOption()}
+          notMerge={true}
+        />
       </React.Fragment>
     )
   }

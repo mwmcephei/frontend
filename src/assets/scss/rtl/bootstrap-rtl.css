@@ -8303,7 +8303,7 @@ fieldset:disabled .btn {
 }
 
 .text-muted {
-  color: #74788d !important;
+  color: rgb(0, 0, 0)!important;
 }
 
 .text-black-50 {

@@ -2,7 +2,6 @@ import React from "react"
 import ReactApexChart from "react-apexcharts"
 
 const StackedColumnChart = ({ periodData }) => {
-  console.log("periodData ", periodData)
   const options = {
     chart: {
       stacked: !0,

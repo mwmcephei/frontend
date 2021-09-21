@@ -12,7 +12,6 @@ import {
 //SimpleBar
 import SimpleBar from "simplebar-react"
 
-
 const Comments = props => {
   return (
     <React.Fragment>
@@ -80,9 +79,7 @@ const Comments = props => {
 
                   <li className="list-group-item py-3">
                     <div className="media">
-                      <div className="avatar-xs me-3">
-
-                      </div>
+                      <div className="avatar-xs me-3"></div>
                       <div className="media-body">
                         <h5 className="font-size-14 mb-1">
                           Clarence Smith{" "}

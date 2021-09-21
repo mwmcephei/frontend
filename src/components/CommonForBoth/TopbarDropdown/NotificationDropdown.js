@@ -4,7 +4,6 @@ import { Link } from "react-router-dom"
 import { Dropdown, DropdownToggle, DropdownMenu, Row, Col } from "reactstrap"
 import SimpleBar from "simplebar-react"
 
-
 //i18n
 import { withTranslation } from "react-i18next"
 
@@ -70,10 +69,7 @@ const NotificationDropdown = props => {
             </Link>
             <Link to="" className="text-reset notification-item">
               <div className="media">
-                <img
-                  className="me-3 rounded-circle avatar-xs"
-                  alt="user-pic"
-                />
+                <img className="me-3 rounded-circle avatar-xs" alt="user-pic" />
                 <div className="media-body">
                   <h6 className="mt-0 mb-1">James Lemire</h6>
                   <div className="font-size-12 text-muted">
@@ -114,10 +110,7 @@ const NotificationDropdown = props => {
 
             <Link to="" className="text-reset notification-item">
               <div className="media">
-                <img
-                  className="me-3 rounded-circle avatar-xs"
-                  alt="user-pic"
-                />
+                <img className="me-3 rounded-circle avatar-xs" alt="user-pic" />
                 <div className="media-body">
                   <h6 className="mt-0 mb-1">Salena Layfield</h6>
                   <div className="font-size-12 text-muted">

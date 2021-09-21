@@ -5,6 +5,7 @@
 .card {
   margin-bottom: $grid-gutter-width;
   box-shadow: $box-shadow;
+  -webkit-overflow-scrolling: touch;  
 }
 
 .card-drop {
@@ -15,6 +16,10 @@
   font-size: 15px;
   margin: 0 0 7px 0;
   font-weight: $font-weight-semibold;
+}
+
+.card-body {
+  -webkit-overflow-scrolling: touch;  
 }
 
 .card-title-desc {

@@ -105,7 +105,6 @@ import ResponsiveTables from "../pages/Tables/ResponsiveTables"
 import EditableTables from "../pages/Tables/EditableTables"
 import DragDropTables from "../pages/Tables/DragDropTables"
 
-
 // Forms
 import FormElements from "../pages/Forms/FormElements"
 import FormLayouts from "../pages/Forms/FormLayouts"
@@ -207,7 +206,6 @@ const userRoutes = [
   { path: "/projects-overview", component: ProjectsOverview },
   { path: "/projects-overview/:id", component: ProjectsOverview },
   { path: "/projects-create", component: ProjectsCreate },
-
 
   // Contacts
   { path: "/contacts-grid", component: ContactsGrid },

@@ -4,7 +4,6 @@ import { Col, Card, CardBody, Media } from "reactstrap"
 //Simple bar
 import SimpleBar from "simplebar-react"
 
-
 const Notifications = () => {
   return (
     <React.Fragment>
@@ -17,9 +16,7 @@ const Notifications = () => {
                 <li className="list-group-item border-0">
                   <Media>
                     <div className="avatar-xs me-3">
-                      <span className="avatar-title rounded-circle bg-light">
-
-                      </span>
+                      <span className="avatar-title rounded-circle bg-light"></span>
                     </div>
                     <Media body>
                       <h5 className="font-size-14">Donec vitae sapien ut</h5>
@@ -40,9 +37,7 @@ const Notifications = () => {
                 <li className="list-group-item border-0">
                   <Media>
                     <div className="avatar-xs me-3">
-                      <span className="avatar-title rounded-circle bg-light">
-
-                      </span>
+                      <span className="avatar-title rounded-circle bg-light"></span>
                     </div>
                     <Media body>
                       <h5 className="font-size-14">
@@ -65,8 +60,7 @@ const Notifications = () => {
                 <li className="list-group-item border-0">
                   <Media>
                     <div className="avatar-xs me-3">
-                      <span className="avatar-title rounded-circle bg-light">
-                      </span>
+                      <span className="avatar-title rounded-circle bg-light"></span>
                     </div>
                     <Media body>
                       <h5 className="font-size-14">
@@ -89,9 +83,7 @@ const Notifications = () => {
                 <li className="list-group-item border-0">
                   <Media>
                     <div className="avatar-xs me-3">
-                      <span className="avatar-title rounded-circle bg-light">
-
-                      </span>
+                      <span className="avatar-title rounded-circle bg-light"></span>
                     </div>
                     <Media body>
                       <h5 className="font-size-14">Donec vitae sapien ut</h5>

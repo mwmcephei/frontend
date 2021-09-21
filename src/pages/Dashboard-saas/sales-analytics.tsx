@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react"
 import { Row, Col, Card, CardBody } from "reactstrap"
 import ReactApexChart from "react-apexcharts"
+import { standardGrey } from "globalVars"
 
 
 type dashboardCircleDiagram_PropType = {
@@ -8,8 +9,10 @@ type dashboardCircleDiagram_PropType = {
   green: number,
   yellow: number,
   red: number,
-  labels: string[]
+  labels: string[],
+  isKPIChart: boolean
 }
+
 
 
 const SalesAnalytics = (props: dashboardCircleDiagram_PropType): ReactElement => {
@@ -20,7 +23,8 @@ const SalesAnalytics = (props: dashboardCircleDiagram_PropType): ReactElement =>
   }
   const options = {
     labels: toolTipLabels,
-    colors: ["#f0ad4e", "#34c38f", "#f46a6a"],
+    colors: (props.isKPIChart ? [standardGrey, "#34c38f", "#f46a6a"] : ["#ffdc5c", "#34c38f", "#f46a6a"]),
+
     legend: { show: !1 },
     plotOptions: {
       pie: {
@@ -64,7 +68,12 @@ const SalesAnalytics = (props: dashboardCircleDiagram_PropType): ReactElement =>
                 <div className="mt-4">
                   <span className="mb-2 text-truncate">
                     <span>{props.labels[1]}</span>
-                    <i className="mdi mdi-circle text-warning me-1" />
+                    {props.isKPIChart ?
+                      <i className="mdi mdi-circle  me-1" style={{ color: standardGrey }} />
+                      :
+                      <i className="mdi mdi-circle  me-1" style={{ color: "#ffdc5c" }} />
+                    }
+
                   </span>
                   <h5 className="mt-2">{props.yellow}</h5>
                 </div>

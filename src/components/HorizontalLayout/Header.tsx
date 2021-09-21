@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import ReactDrawer from "react-drawer"
 
@@ -21,6 +21,11 @@ import { withTranslation } from "react-i18next"
 const Header = props => {
   const [position, setPosition] = useState("")
   const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    props.toggleLeftmenu(false)
+  }, [window.location.href]);
+
 
   const toggleTopDrawer = () => {
     setPosition("right")

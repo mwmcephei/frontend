@@ -2,8 +2,6 @@ import React from "react"
 import "tui-chart/dist/tui-chart.css"
 import { MapChart } from "@toast-ui/react-chart"
 
-
-
 var theme = {
   chart: {
     background: {
@@ -27,7 +25,6 @@ var theme = {
     borderColor: "#F4511E",
   },
 }
-
 
 const MapChartToast = () => {
   const data = {

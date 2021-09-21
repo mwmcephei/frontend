@@ -79,7 +79,7 @@ function Earning(props) {
                     <option value="oct">Oct</option>
                   </select>
                   {/* <div className="input-group-append"> */}
-                  <label className="input-group-text">Month</label>
+                  <label className="input-group-text">Measure</label>
                   {/* </div> */}
                 </div>
               </div>

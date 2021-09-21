@@ -301,8 +301,7 @@ const Dashboard = props => {
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">
-                    </th>
+                    <th scope="row"></th>
                     <td>
                       <div>
                         <h5 className="text-truncate font-size-14">
@@ -314,8 +313,7 @@ const Dashboard = props => {
                     <td>$ 255</td>
                   </tr>
                   <tr>
-                    <th scope="row">
-                    </th>
+                    <th scope="row"></th>
                     <td>
                       <div>
                         <h5 className="text-truncate font-size-14">

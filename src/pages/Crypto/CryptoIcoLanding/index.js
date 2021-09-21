@@ -44,7 +44,6 @@ const CryptoIcoLanding = () => {
       {/* mini cards */}
       <CardsMini />
 
-
       {/* features */}
       <Features />
 

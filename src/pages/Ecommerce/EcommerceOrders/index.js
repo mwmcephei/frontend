@@ -39,7 +39,6 @@ import {
   deleteOrder as onDeleteOrder,
 } from "store/actions"
 
-
 const EcommerceOrders = props => {
   const dispatch = useDispatch()
 

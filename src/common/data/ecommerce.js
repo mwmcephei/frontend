@@ -1,5 +1,3 @@
-
-
 const productsData = []
 
 const recentProducts = [

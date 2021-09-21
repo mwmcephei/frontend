@@ -11,7 +11,6 @@ import { Container, Row, Col, CardBody, Card, Button } from "reactstrap"
 import profileImg from "../../assets/images/profile-img.png"
 import logoImg from "../../assets/images/logo.svg"
 
-
 const LockScreen = () => {
   return (
     <React.Fragment>
@@ -59,7 +58,6 @@ const LockScreen = () => {
                   <div className="p-2">
                     <AvForm className="form-horizontal">
                       <div className="user-thumb text-center mb-4">
-
                         <h5 className="font-size-15 mt-3">Maria Laird</h5>
                       </div>
 

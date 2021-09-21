@@ -1,10 +1,7 @@
 import React, { Component } from "react"
 import { Carousel, CarouselItem } from "reactstrap"
 
-
-const items = [
-
-]
+const items = []
 
 class Slide extends Component {
   constructor(props) {

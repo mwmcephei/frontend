@@ -3,8 +3,6 @@ import React from "react"
 import "tui-chart/dist/tui-chart.css"
 import { BulletChart } from "@toast-ui/react-chart"
 
-
-
 const theme = {
   chart: {
     background: {

@@ -1,7 +1,6 @@
 import React from "react"
 import { Row, Col, Card } from "reactstrap"
 
-
 const CardWelcome = () => {
   return (
     <React.Fragment>
@@ -30,9 +29,7 @@ const CardWelcome = () => {
               </div>
             </Col>
             <Col lg="3" sm="4" className="align-self-center">
-              <div>
-
-              </div>
+              <div></div>
             </Col>
           </Row>
         </div>

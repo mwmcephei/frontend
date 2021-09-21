@@ -21,7 +21,6 @@ import { Link } from "react-router-dom"
 
 import "../../components/CommonForBoth/rightbar.scss"
 
-
 //constants
 import {
   layoutTypes,
@@ -448,7 +447,6 @@ const RightSidebar = props => {
                         alt="sidebar bg image"
                         width="90"
                         className="themesideimage rounded"
-
                       />
                     </label>
                     {"   "}
@@ -474,7 +472,6 @@ const RightSidebar = props => {
                         alt="sidebar bg image"
                         width="90"
                         className="themesideimage rounded"
-
                       />
                     </label>
                     {"   "}
@@ -500,7 +497,6 @@ const RightSidebar = props => {
                         alt="sidebar bg image"
                         width="90"
                         className="themesideimage rounded"
-
                       />
                     </label>
                     {"   "}
@@ -524,7 +520,6 @@ const RightSidebar = props => {
                         alt="sidebar bg image"
                         width="90"
                         className="themesideimage rounded"
-
                       />
                     </label>
                     {"   "}

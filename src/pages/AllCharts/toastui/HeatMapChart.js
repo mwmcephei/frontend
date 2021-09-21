@@ -3,8 +3,6 @@ import React from "react"
 import "tui-chart/dist/tui-chart.css"
 import { HeatMapChart } from "@toast-ui/react-chart"
 
-
-
 const theme = {
   chart: {
     background: {
@@ -48,7 +46,6 @@ const theme = {
     borderColor: "#F4511E",
   },
 }
-
 
 const ProfileMenu = props => {
   const data = {

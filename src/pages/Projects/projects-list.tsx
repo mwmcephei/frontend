@@ -7,22 +7,17 @@ import {
   Row,
   Table,
 } from "reactstrap"
-import { getColors, focusAreaColors } from "../../globalVars"
+import { getMax, getColors, focusAreaColors } from "../../globalVars"
 import { PieChart, Pie, Cell } from 'recharts';
-import { Measure } from "types"
+import ProgressChart from "./ProgressChart"
+import { Measure } from "../../types"
 
 
 
 const ProjectsList = (props: { measures: Measure[] }) => {
   const history = useHistory()
 
-  const percentage = 60
-  const data = [
-    { name: 'Group B', value: 100 - percentage },
-    { name: 'Group A', value: 0 + percentage },
-  ];
-
-  const getDoughnutData = (bigger: number, smaller: number) => {
+  const getDoughnutData = (bigger, smaller) => {
     return [
       { name: 'a', value: bigger - smaller },
       { name: 'b', value: smaller },
@@ -37,7 +32,6 @@ const ProjectsList = (props: { measures: Measure[] }) => {
     }
   }
 
-
   function handleMeasureClick(measureID) {
     history.push("/measureReports/" + measureID)
   }
@@ -46,9 +40,6 @@ const ProjectsList = (props: { measures: Measure[] }) => {
 
   return (
     <React.Fragment>
-      <Row>
-        {process.env.REACT_APP_TEST}
-      </Row>
       <Row>
         <Col lg="12">
           <div className="">
@@ -60,7 +51,6 @@ const ProjectsList = (props: { measures: Measure[] }) => {
                     <th scope="col" style={{ width: "100px" }}>Focus Area</th>
                     <th scope="col" >Measure Name</th>
                     <th scope="col" >Measure Team</th>
-                    <th scope="col" ></th>
                     <th scope="col">Measure Progress</th>
                     <th scope="col">KPI Name</th>
                     <th scope="col">KPI Progress</th>
@@ -71,9 +61,7 @@ const ProjectsList = (props: { measures: Measure[] }) => {
 
                 <tbody>
                   {map(props.measures, (measure, index) => (
-
-                    <tr key={index} key={index} onClick={() => handleMeasureClick(measure._id)}>
-
+                    <tr key={index} onClick={() => handleMeasureClick(measure._id)}>
 
                       <td>
                         {measure.id}
@@ -82,7 +70,7 @@ const ProjectsList = (props: { measures: Measure[] }) => {
                       <td>
                         <div className="d-flex justify-content-center text-center align-items-center
                           rounded-circle 
-                          text-muted text-truncate"
+                          text-truncate"
                           style={{ height: '40px', width: '40px', background: focusAreaColors[measure.focusArea] }} >
                           <b>{measure.focusArea}</b>
                         </div>
@@ -103,29 +91,25 @@ const ProjectsList = (props: { measures: Measure[] }) => {
 
 
 
-                      <td className="p-2 text-nowrap" style={{}}>
-                        <Row className="d-flex justify-content-left ">
-                          <Col xs="6" xm="6" lg="6" xl="6" className="p-0 m-0">
+                      <td className="p-2 text-nowrap " style={{}}>
+                        < div className="d-flex flex-row align-items-center ">
+                          <div className="p-0 m-0 d-flex flex-column">
                             <div>
                               <i className="bx bx-user " style={{ fontSize: "15px", marginRight: "2px" }}></i> ML: {measure.measureLead}
                             </div>
                             <div>
                               <i className="bx bx-user " style={{ fontSize: "15px", marginRight: "2px" }}></i> MS: {measure.measureSponsor}
                             </div>
-                          </Col>
-                          <Col xs="6" xm="6" lg="6" xl="6" className="d-none d-xl-block">
+                          </div>
+                          <div className="d-none d-xl-block  d-flex flex-column m-2">
                             <div className="d-flex align-items-center">
                               <i className="bx bx-user " style={{ fontSize: "15px", marginRight: "2px" }}></i><span> LM: {measure.lineOrgSponsor}</span>
                             </div>
                             <div className="d-flex align-items-center">
                               <i className="bx bx-user " style={{ fontSize: "15px", marginRight: "2px" }}></i><span> SM: {measure.solutionManager}</span>
                             </div>
-
-                          </Col>
-                        </Row>
-                      </td>
-
-                      <td style={{ maxWidth: "50px", minWidth: "50px" }}>
+                          </div>
+                        </div>
                       </td>
 
                       <td className=" pl-4" style={{ wordWrap: "break-word", maxWidth: "200px", minWidth: "150px" }}>
@@ -135,9 +119,9 @@ const ProjectsList = (props: { measures: Measure[] }) => {
                             </Col>
                           <Col>
                             <PieChart width={30} height={30} >
-                              <Pie data={[{ name: 'name', dataKey: 400 },]}
-                                dataKey="dataKey" outerRadius={10}
-                                fill={getColors(Math.max(...[measure.risk, measure.artefact, measure.budget]))[1]}
+                              <Pie data={[{ name: 'Geeksforgeeks', students: 400 },]}
+                                dataKey="students" outerRadius={10}
+                                fill={getColors(getMax([measure.risk, measure.artefact, measure.budget]))[1]}
                                 stroke="none"
                                 isAnimationActive={false} />
                             </PieChart>
@@ -149,18 +133,7 @@ const ProjectsList = (props: { measures: Measure[] }) => {
                             Progress:
                             </Col>
                           <Col>
-                            <PieChart width={30} height={30} style={{ transform: "rotate(270deg)" }}>
-                              <Pie data={data}
-                                dataKey="value" outerRadius={10} innerRadius={5}
-                                isAnimationActive={false}
-                              >
-                                {data.map((
-                                  entry, index) => (
-                                  <Cell key={`cell-${index}`} fill={getColors(Math.max(...[measure.risk, measure.artefact, measure.budget]))[index % 2]} />
-                                ))}
-                              </Pie>
-
-                            </PieChart>
+                            <ProgressChart measure={measure} colors={getColors(getMax([measure.risk, measure.artefact, measure.budget]))} />
                           </Col>
                         </Row>
                       </td>
@@ -200,8 +173,10 @@ const ProjectsList = (props: { measures: Measure[] }) => {
                               dataKey="value" outerRadius={20} innerRadius={10}
                               isAnimationActive={false}
                             >
-                              {data.map((
+                              {getDoughnutData(measure.approved, measure.spent).map((
+                                // @ts-ignore
                                 entry, index) => (
+                                // @ts-ignore
                                 <Cell key={`cell-${index}`} fill={getColors(-1)[index % 2]} />
                               ))}
                             </Pie>
@@ -211,7 +186,6 @@ const ProjectsList = (props: { measures: Measure[] }) => {
                       </td>
 
                     </tr>
-
                   ))}
                 </tbody>
               </Table>

@@ -33,7 +33,6 @@ const EmailSideBar = props => {
           Compose
         </Button>
 
-
         <h6 className="mt-4">Labels</h6>
 
         <div className="mail-list mt-1">
@@ -63,7 +62,6 @@ const EmailSideBar = props => {
 
         <div className="mt-2">
           <Link to="#" className="media">
-
             <Media className="chat-user-box" body>
               <p className="user-title m-0">Scott Median</p>
               <p className="text-muted">Hello</p>
@@ -71,7 +69,6 @@ const EmailSideBar = props => {
           </Link>
 
           <Link to="#" className="media">
-
             <Media className="chat-user-box" body>
               <p className="user-title m-0">Julian Rosa</p>
               <p className="text-muted">What about our next..</p>
@@ -79,7 +76,6 @@ const EmailSideBar = props => {
           </Link>
 
           <Link to="#" className="media">
-
             <Media className="chat-user-box" body>
               <p className="user-title m-0">David Medina</p>
               <p className="text-muted">Yeah everything is fine</p>
@@ -87,7 +83,6 @@ const EmailSideBar = props => {
           </Link>
 
           <Link to="#" className="media">
-
             <Media className="chat-user-box" body>
               <p className="user-title m-0">Jay Baker</p>
               <p className="text-muted">Wow that's great</p>

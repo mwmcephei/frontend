@@ -23,10 +23,34 @@ import BudgetReport from "./components/pmoComponents/BudgetReport"
 // Import scss
 import "./assets/scss/theme.scss"
 
-
+import { StatusBar, Style } from "@capacitor/status-bar"
+//import { App as CapacitorApp } from '@capacitor/app'
 
 
 const App = props => {
+  /*
+    CapacitorApp.addListener('backButton', ({ canGoBack }) => {
+      if (!canGoBack) {
+        CapacitorApp.exitApp();
+      } else {
+        window.history.back();
+      }
+    });
+  
+  // iOS only
+  window.addEventListener('statusTap', function () {
+    console.log('statusbar tapped');
+    setStatusBarStyleDark()
+  });
+  
+  // Display content under transparent status bar (Android only)
+  StatusBar.setOverlaysWebView({ overlay: false });
+  
+  const setStatusBarStyleDark = async () => {
+    await StatusBar.setStyle({ style: Style.Dark });
+  };
+  */
+
   function getLayout() {
     let layoutCls = VerticalLayout
     switch (props.layout.layoutType) {
@@ -49,13 +73,17 @@ const App = props => {
           <Route path="/" exact>
             <Overview />
           </Route>
+
           <Route path="/dashboard">
             <Overview />
           </Route>
           <Route path="/measure_overview">
             <MeasureOverview />
           </Route>
-          <Route path="/measure_reports">
+          <Route path="/measureReports/:measureID">
+            <MeasureReports />
+          </Route>
+          <Route path="/measureReports">
             <MeasureReports />
           </Route>
           <Route path="/budget_reports">
