@@ -25,37 +25,37 @@ const ProjectDetail = ({ currentMeasure }): ReactElement => {
 
   return (
 
-    <Card>
-      <CardBody className="px-4">
-
-        <Row>
-          <div className="d-flex align-items-center "  >
-            <div className="d-flex align-items-center justify-content-between">
-              <div className="d-flex justify-content-center text-center align-items-center
+    <Card style={{ height: "330px" }}>
+      <CardBody className="px-4 d-flex flex-column justify-content-between">
+        <div >
+          <Row>
+            <div className="d-flex align-items-center "  >
+              <div className="d-flex align-items-center justify-content-between">
+                <div className="d-flex justify-content-center text-center align-items-center
                           rounded-circle 
                            text-truncate"
-                style={{ minHeight: '40px', minWidth: '40px', maxHeight: '40px', maxWidth: '40px', background: focusAreaColors[currentMeasure.focusArea] }} >
-                <b>{currentMeasure.focusArea}</b>
-              </div>
+                  style={{ minHeight: '40px', minWidth: '40px', maxHeight: '40px', maxWidth: '40px', background: focusAreaColors[currentMeasure.focusArea] }} >
+                  <b>{currentMeasure.focusArea}</b>
+                </div>
 
-              <div className="d-flex flex-column align-items-start justify-content-start m-2">
-                <div className="font-size-15 "><b>{currentMeasure.title}</b></div>
-                <div className="font-size-15 ">{currentMeasure.name}</div>
+                <div className="d-flex flex-column align-items-start justify-content-start m-2">
+                  <div className="font-size-15 "><b>{currentMeasure.title}</b></div>
+                  <div className="font-size-15 ">{currentMeasure.name}</div>
+                </div>
               </div>
             </div>
-          </div>
-        </Row>
+          </Row>
 
 
 
-        <Row>
-          <h6 className=" mt-4"><b>Description:</b></h6>
-          <p className=" ">
-            {currentMeasure.description}
-          </p>
+          <Row>
+            <h6 className=" mt-4"><b>Description:</b></h6>
+            <p className=" ">
+              {currentMeasure.description}
+            </p>
 
-        </Row>
-
+          </Row>
+        </div>
 
 
 

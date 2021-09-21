@@ -23,20 +23,24 @@ import BudgetReport from "./components/pmoComponents/BudgetReport"
 // Import scss
 import "./assets/scss/theme.scss"
 
-import { StatusBar, Style } from "@capacitor/status-bar"
+//import { StatusBar, Style } from "@capacitor/status-bar"
 //import { App as CapacitorApp } from '@capacitor/app'
 
 
 const App = props => {
-  /*
-    CapacitorApp.addListener('backButton', ({ canGoBack }) => {
-      if (!canGoBack) {
-        CapacitorApp.exitApp();
-      } else {
-        window.history.back();
-      }
-    });
-  
+
+
+
+
+  /* 
+  CapacitorApp.addListener('backButton', ({ canGoBack }) => {
+    if (!canGoBack) {
+      CapacitorApp.exitApp();
+    } else {
+      window.history.back();
+    }
+  });
+
   // iOS only
   window.addEventListener('statusTap', function () {
     console.log('statusbar tapped');

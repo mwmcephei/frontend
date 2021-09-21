@@ -23,129 +23,128 @@ const TeamMembers = (props: Team): ReactElement => {
 
   return (
 
-    <Col xs="12" xm="6" lg="6" xl="6" >
-      <Card style={{ height: "330px" }}>
-        <CardBody>
-          <CardTitle className="mb-4">Team</CardTitle>
 
-          <div className="table-responsive">
-            <Table className="table align-middle table-nowrap">
-              <tbody>
+    <Card style={{ height: "330px" }}>
+      <CardBody>
+        <CardTitle className="mb-4">Team</CardTitle>
 
-                <tr >
-                  <td style={{ width: "50px" }}>
-                    <i className="bx bx-user " style={{ fontSize: "15px", marginRight: "2px" }}></i>
-                  </td>
-                  <td>
-                    <h5 className="font-size-14 m-0">
-                      <div>
-                        {divideName(props.lead).firstName}
-                      </div>
-                      <div>
-                        {divideName(props.lead).lastName}
-                      </div>
-                    </h5>
-                  </td>
-                  <td>
+        <div className="table-responsive">
+          <Table className="table align-middle table-nowrap">
+            <tbody>
+
+              <tr >
+                <td style={{ width: "50px" }}>
+                  <i className="bx bx-user " style={{ fontSize: "15px", marginRight: "2px" }}></i>
+                </td>
+                <td>
+                  <h5 className="font-size-14 m-0">
                     <div>
-                      <Link
-                        to="#"
-                        className="badge  bg-soft  font-size-11 me-1"
-                        style={{ background: "#435fe3", color: "white" }}
-                      >
-                        Measure Lead
-                        </Link>
+                      {divideName(props.lead).firstName}
                     </div>
-                  </td>
-                </tr>
-
-                <tr >
-                  <td style={{ width: "50px" }}>
-                    <i className="bx bx-user " style={{ fontSize: "15px", marginRight: "2px" }}></i>
-                  </td>
-                  <td>
-                    <h5 className="font-size-14 m-0">
-                      <div>
-                        {divideName(props.measureSponsor).firstName}
-                      </div>
-                      <div>
-                        {divideName(props.measureSponsor).lastName}
-                      </div>
-                    </h5>
-                  </td>
-                  <td>
                     <div>
-                      <Link
-                        to="#"
-                        className="badge  bg-soft  font-size-11 me-1"
-                        style={{ background: "#435fe3", color: "white" }}
-                      >
-                        Measure Sponsor
-                        </Link>
+                      {divideName(props.lead).lastName}
                     </div>
-                  </td>
-                </tr>
+                  </h5>
+                </td>
+                <td>
+                  <div>
+                    <Link
+                      to="#"
+                      className="badge  bg-soft  font-size-11 me-1"
+                      style={{ background: "#435fe3", color: "white" }}
+                    >
+                      Measure Lead
+                        </Link>
+                  </div>
+                </td>
+              </tr>
 
-                <tr >
-                  <td style={{ width: "50px" }}>
-                    <i className="bx bx-user " style={{ fontSize: "15px", marginRight: "2px" }}></i>
-                  </td>
-                  <td>
-                    <h5 className="font-size-14 m-0">
-                      <div>
-                        {divideName(props.lineOrgSponsor).firstName}
-                      </div>
-                      <div>
-                        {divideName(props.lineOrgSponsor).lastName}
-                      </div>
-                    </h5>
-                  </td>
-                  <td>
+              <tr >
+                <td style={{ width: "50px" }}>
+                  <i className="bx bx-user " style={{ fontSize: "15px", marginRight: "2px" }}></i>
+                </td>
+                <td>
+                  <h5 className="font-size-14 m-0">
                     <div>
-                      <Link
-                        to="#"
-                        className="badge  bg-soft  font-size-11 me-1"
-                        style={{ background: "#435fe3", color: "white" }}
-                      >
-                        Line Organization Sponsor
-                        </Link>
+                      {divideName(props.measureSponsor).firstName}
                     </div>
-                  </td>
-                </tr>
-
-                <tr >
-                  <td style={{ width: "50px" }}>
-                    <i className="bx bx-user " style={{ fontSize: "15px", marginRight: "2px" }}></i>
-                  </td>
-                  <td>
-                    <h5 className="font-size-14 m-0">
-                      <div>
-                        {divideName(props.solutionManager).firstName}
-                      </div>
-                      <div>
-                        {divideName(props.solutionManager).lastName}
-                      </div>
-                    </h5>
-                  </td>
-                  <td>
                     <div>
-                      <Link
-                        to="#"
-                        className="badge  bg-soft  font-size-11 me-1"
-                        style={{ background: "#435fe3", color: "white" }}
-                      >
-                        Solution Manager
-                        </Link>
+                      {divideName(props.measureSponsor).lastName}
                     </div>
-                  </td>
-                </tr>
+                  </h5>
+                </td>
+                <td>
+                  <div>
+                    <Link
+                      to="#"
+                      className="badge  bg-soft  font-size-11 me-1"
+                      style={{ background: "#435fe3", color: "white" }}
+                    >
+                      Measure Sponsor
+                        </Link>
+                  </div>
+                </td>
+              </tr>
 
-              </tbody>
-            </Table>
-          </div>
-        </CardBody>
-      </Card>
-    </Col>
+              <tr >
+                <td style={{ width: "50px" }}>
+                  <i className="bx bx-user " style={{ fontSize: "15px", marginRight: "2px" }}></i>
+                </td>
+                <td>
+                  <h5 className="font-size-14 m-0">
+                    <div>
+                      {divideName(props.lineOrgSponsor).firstName}
+                    </div>
+                    <div>
+                      {divideName(props.lineOrgSponsor).lastName}
+                    </div>
+                  </h5>
+                </td>
+                <td>
+                  <div>
+                    <Link
+                      to="#"
+                      className="badge  bg-soft  font-size-11 me-1"
+                      style={{ background: "#435fe3", color: "white" }}
+                    >
+                      Line Organization Sponsor
+                        </Link>
+                  </div>
+                </td>
+              </tr>
+
+              <tr >
+                <td style={{ width: "50px" }}>
+                  <i className="bx bx-user " style={{ fontSize: "15px", marginRight: "2px" }}></i>
+                </td>
+                <td>
+                  <h5 className="font-size-14 m-0">
+                    <div>
+                      {divideName(props.solutionManager).firstName}
+                    </div>
+                    <div>
+                      {divideName(props.solutionManager).lastName}
+                    </div>
+                  </h5>
+                </td>
+                <td>
+                  <div>
+                    <Link
+                      to="#"
+                      className="badge  bg-soft  font-size-11 me-1"
+                      style={{ background: "#435fe3", color: "white" }}
+                    >
+                      Solution Manager
+                        </Link>
+                  </div>
+                </td>
+              </tr>
+
+            </tbody>
+          </Table>
+        </div>
+      </CardBody>
+    </Card>
 
   )
 }

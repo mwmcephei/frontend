@@ -56,18 +56,18 @@ function TapVisitors({ measureID, totalApprovedBudget }: TapVisitorsProps) {
 
 
   return (
-    <React.Fragment>
-      <Container fluid>
-        <Col xl={12}>
-          <Card>
-            <CardBody>
-              <div className="d-flex flex-column">
+    <div >
 
-                <div className="ms-2">
-                  <h5 className="card-title mb-3">Artefacts Progress</h5>
-                </div>
+      <Col xl={12} >
+        <Card style={{ height: "450px" }}>
+          <CardBody>
+            <div className="d-flex flex-column">
 
-                {   /*    <div className="p-3" style={{ width: "100%" }}>
+              <div className="ms-2">
+                <h5 className="card-title mb-3">Artefacts Progress</h5>
+              </div>
+
+              {   /*    <div className="p-3" style={{ width: "100%" }}>
                   <div className="font-size-14 d-flex justify-content-between">
 
 
@@ -92,57 +92,57 @@ function TapVisitors({ measureID, totalApprovedBudget }: TapVisitorsProps) {
   </div>   */}
 
 
-              </div>
+            </div>
 
 
-              <hr />
+            <hr />
 
-              <div>
-                <ul className="list-group list-group-flush">
-                  {artefacts && artefacts.map(art => {
-                    return <li className="list-group-item">
-                      <div className="py-2">
-                        <div className="font-size-14 d-flex justify-content-between">
+            <div>
+              <ul className="list-group list-group-flush">
+                {artefacts && artefacts.map(art => {
+                  return <li className="list-group-item">
+                    <div className="py-2">
+                      <div className="font-size-14 d-flex justify-content-between">
 
-                          {window.innerWidth > 1000 ?
-                            <div className=""
-                              style={{ maxWidth: "900px" }}
-                            >{art.description}</div>
-                            :
-                            <div className=""
-                              style={{ maxWidth: "280px" }}
-                            >{art.description}</div>
-                          }
+                        {window.innerWidth > 1000 ?
+                          <div className=""
+                            style={{ maxWidth: "900px" }}
+                          >{art.description}</div>
+                          :
+                          <div className=""
+                            style={{ maxWidth: "280px" }}
+                          >{art.description}</div>
+                        }
 
-                          <div className=" " >
-                            {progressAsString(art.progress)}%
+                        <div className=" " >
+                          {progressAsString(art.progress)}%
                           </div>
-                        </div>
-                        <div className="progress animated-progess progress-sm">
-                          <div
-                            className="progress-bar"
-                            role="progressbar"
-                            style={{ width: progressAsString(art.progress) + "%", background: allianzBlue }}
-                            aria-valuenow={Number(progressAsString(art.progress))}
-                            aria-valuemin={Number(0)}
-                            aria-valuemax={Number(100)}
-                          ></div>
-                        </div>
                       </div>
-                    </li>
+                      <div className="progress animated-progess progress-sm">
+                        <div
+                          className="progress-bar"
+                          role="progressbar"
+                          style={{ width: progressAsString(art.progress) + "%", background: allianzBlue }}
+                          aria-valuenow={Number(progressAsString(art.progress))}
+                          aria-valuemin={Number(0)}
+                          aria-valuemax={Number(100)}
+                        ></div>
+                      </div>
+                    </div>
+                  </li>
 
-                  })
+                })
 
-                  }
+                }
 
-                </ul>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
+              </ul>
+            </div>
+          </CardBody>
+        </Card>
+      </Col>
 
-      </Container>
-    </React.Fragment>
+
+    </div>
   )
 }
 

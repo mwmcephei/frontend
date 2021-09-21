@@ -35,6 +35,8 @@ const ProgressChart = (props) => {
             let sumOverArtefacts = 0
             for (let i = 0; i < artefacts.length; i++) {
                 const budgetAsNumber = artefacts[i].budget.length > 0 ? parseInt(artefacts[i].budget.substring(0, artefacts[i].budget.length - 2)) * 1000 : 0
+                console.log("BUDGET")
+                console.log(artefacts[i].progress)
                 sumOverArtefacts = sumOverArtefacts + (budgetAsNumber * artefacts[i].progress)
             }
             const result = sumOverArtefacts / props.measure.budgetDetail.totalApprovedBudget

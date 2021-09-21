@@ -38,53 +38,46 @@ const TotalSellngProduct = ({ artefacts, budget, risks }: StatusProps): ReactEle
 
   return (
 
+    <Card style={{ height: "300px" }}>
+      <CardBody>
+        <CardTitle className="mb-5 d-flex justify-content-between align-items-center ">
+          <div>Status</div>
+          <div>{getStreetLight(getMax([artefacts, budget, risks]), 13)}</div>
+        </CardTitle>
 
-
-    <Col xs="12" xm="6" lg="6" xl="6">
-      <Card style={{ height: "330px" }}>
-        <CardBody>
-          <CardTitle className="mb-5 d-flex justify-content-between align-items-center ">
-            <div>Status</div>
-            <div>{getStreetLight(getMax([artefacts, budget, risks]), 13)}</div>
-          </CardTitle>
-
-
-
-
-
-          <div className="table-responsive mt-4">
-            <Table className="table align-middle mb-0">
-              <tbody>
-                <tr  >
-                  <td>
-                    Artefacts
+        <div className="table-responsive mt-4">
+          <Table className="table align-middle mb-0">
+            <tbody>
+              <tr  >
+                <td>
+                  Artefacts
                                     </td>
-                  <td className="d-flex justify-content-end p-2">
-                    {getStreetLight(artefacts, 10)}
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Budget
+                <td className="d-flex justify-content-end p-2">
+                  {getStreetLight(artefacts, 10)}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Budget
                                      </td>
-                  <td className="d-flex justify-content-end p-2">
-                    {getStreetLight(budget, 10)}
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Risks & Issues
+                <td className="d-flex justify-content-end p-2">
+                  {getStreetLight(budget, 10)}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Risks & Issues
                       </td>
-                  <td className="d-flex justify-content-end p-2">
-                    {getStreetLight(risks, 10)}
-                  </td>
-                </tr>
-              </tbody>
-            </Table>
-          </div>
-        </CardBody>
-      </Card>
-    </Col>
+                <td className="d-flex justify-content-end p-2">
+                  {getStreetLight(risks, 10)}
+                </td>
+              </tr>
+            </tbody>
+          </Table>
+        </div>
+      </CardBody>
+    </Card>
+
 
 
   )
