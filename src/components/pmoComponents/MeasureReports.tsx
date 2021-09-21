@@ -117,7 +117,7 @@ const MeasureReports = (props): ReactElement => {
                     {measureReportStatus}
                   </Col>
                   <Col xs="12" xm="6" lg="6" xl="6" >
-                    <Card style={{ height: "215px" }}>
+                    <Card style={{ height: "300px" }}>
                       <CardBody>
                         <CardTitle className="mb-4">KPI</CardTitle>
                         {kpi}
