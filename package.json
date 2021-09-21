@@ -2,7 +2,7 @@
   "name": "skote-react-hook",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://mwmcephei.github.io/pmo-frontend",
+  "homepage": "http://mwmcephei.github.io/frontend",
   "dependencies": {
     "@capacitor/android": "^3.1.2",
     "@capacitor/cli": "^3.1.2",
