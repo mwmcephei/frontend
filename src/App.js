@@ -77,7 +77,9 @@ const App = props => {
           <Route path="/" exact>
             <Overview />
           </Route>
-
+          <Route path="/frontend">
+            <Overview />
+          </Route>
           <Route path="/dashboard">
             <Overview />
           </Route>
